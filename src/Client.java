@@ -86,7 +86,7 @@ public class Client {
         System.out.print("Enter your username: ");
         String username = scanner.nextLine();
 
-        Socket socket = new Socket("localhost", 6575);
+        Socket socket = new Socket("localhost", Server.PORT);
         Client client = new Client(socket, username);
 
         client.messageListener();

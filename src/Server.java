@@ -4,6 +4,7 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Server {
+    public static final int PORT = 6575; // Change to any ephemeral you'd like 
     
     private String serverName;
     private final ServerSocket serverSocket;
@@ -47,7 +48,7 @@ public class Server {
     }
 
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(6575);
+        ServerSocket serverSocket = new ServerSocket(Server.PORT);
         Server server = new Server(serverSocket);
 
         Scanner scanner = new Scanner(System.in);
